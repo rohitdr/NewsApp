@@ -1,0 +1,4 @@
+npm install jquery --save
+npm i --save-dev @types/jquery
+
+npm i react-top-loading-bar
