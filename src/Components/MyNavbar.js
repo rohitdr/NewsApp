@@ -27,16 +27,18 @@ const MyNavbar=()=> {
           <Navbar.Toggle aria-label="toggle navigation" />
           {/* <AcmeLogo /> */}
           <Text b color="inherit" hideIn="xs">
-            ACME
+            NewsHub
           </Text>
         </Navbar.Brand>
         <Navbar.Content activeColor="error" enableCursorHighlight hideIn="xs" varient="highlight-solid-rounded" >
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link  href="#">
-            Customers
-          </Navbar.Link>
-          <Navbar.Link  href="#">Pricing</Navbar.Link>
-          <Navbar.Link isActive href="#">Company</Navbar.Link>
+          <Navbar.Link href="#">Home</Navbar.Link>
+          <Navbar.Link  href="#">Bussiness</Navbar.Link>
+          <Navbar.Link  href="#">Entertainment</Navbar.Link>
+          <Navbar.Link isActive href="#">Sports</Navbar.Link>
+          <Navbar.Link  href="#">Health</Navbar.Link>
+          <Navbar.Link  href="#">Technology</Navbar.Link>
+          <Navbar.Link  href="#">Sceince</Navbar.Link>
+          
         </Navbar.Content>
         <Navbar.Content>
           <Navbar.Link color="secondary" href="#">
