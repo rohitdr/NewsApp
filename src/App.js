@@ -2,7 +2,7 @@
 import './App.css';
 import LoadingBar from 'react-top-loading-bar'
 import React, { useState } from 'react'
-import Navbar from './Components/Navbar';
+import MyNavbar from './Components/MyNavbar';
 import News from './Components/News';
 
 
@@ -26,7 +26,7 @@ import Login from './Components/Login';
 
         <>
       <BrowserRouter>
-      <Navbar/>
+      <MyNavbar/>
       <LoadingBar
         color='#f11946'
         progress={progress}

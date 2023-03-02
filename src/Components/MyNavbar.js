@@ -1,12 +1,74 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { Navbar, Button, Link, Text } from "@nextui-org/react";
+// import { Layout } from "./Layout.js";
+// import { AcmeLogo } from "./AcmeLogo.js";
 
-
-const Navbar=()=> {
-  
+const MyNavbar=()=> {
+  const collapseItems = [
+    "Features",
+    "Customers",
+    "Pricing",
+    "Company",
+    "Legal",
+    "Team",
+    "Help & Feedback",
+    "Login",
+    "Sign Up",
+  ];
     return (
         <>
-        <nav className="navbar  fixed-top navbar-expand-lg bg-light mb-2 ">
+        
+
+
+    
+      <Navbar isBordered variant="floating">
+        <Navbar.Brand>
+          <Navbar.Toggle aria-label="toggle navigation" />
+          {/* <AcmeLogo /> */}
+          <Text b color="inherit" hideIn="xs">
+            ACME
+          </Text>
+        </Navbar.Brand>
+        <Navbar.Content activeColor="error" enableCursorHighlight hideIn="xs" varient="highlight-solid-rounded" >
+          <Navbar.Link href="#">Features</Navbar.Link>
+          <Navbar.Link  href="#">
+            Customers
+          </Navbar.Link>
+          <Navbar.Link  href="#">Pricing</Navbar.Link>
+          <Navbar.Link isActive href="#">Company</Navbar.Link>
+        </Navbar.Content>
+        <Navbar.Content>
+          <Navbar.Link color="secondary" href="#">
+            Login
+          </Navbar.Link>
+          <Navbar.Item>
+            <Button auto flat as={Link} href="#">
+              Sign Up
+            </Button>
+          </Navbar.Item>
+        </Navbar.Content>
+        <Navbar.Collapse>
+        {collapseItems.map((item, index) => (
+          <Navbar.CollapseItem key={item}>
+            <Link
+              color="inherit"
+              css={{
+                minWidth: "100%",
+              }}
+              href="#"
+            >
+              {item}
+            </Link>
+          </Navbar.CollapseItem>
+        ))}
+      </Navbar.Collapse>
+      </Navbar>
+   
+  
+
+
+        {/* <nav className="navbar  fixed-top navbar-expand-lg bg-light mb-2 ">
         <div className="container-fluid "><div>
           <Link className="navbar-brand" to="/home">NewsMonkey</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +111,7 @@ const Navbar=()=> {
       </form>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
 
 
@@ -64,4 +126,4 @@ const Navbar=()=> {
   }
 
 
-export default Navbar
+export default MyNavbar
