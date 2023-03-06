@@ -8,6 +8,8 @@ import News from './Components/News';
 
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Login from './Components/Login';
+import Signup from './Components/Signup';
+
 
 
  const App=()=>  {
@@ -16,15 +18,14 @@ import Login from './Components/Login';
    const apiKey="d51faa4f200446e8aaf3fc1fa50c9b66"
 
 
-
     return (
       <div>
 
-       
-
+      
 
 
         <>
+      
       <BrowserRouter>
       <MyNavbar/>
       <LoadingBar
@@ -47,6 +48,7 @@ import Login from './Components/Login';
                 <Route exact path="/sports"  element={ <News setProgress={setProgress} apiKey={apiKey}  page_size={5} key="science"  category="sports"/>} />
                 <Route exact path="/technology"  element={ <News setProgress={setProgress} apiKey={apiKey}  page_size={5} key="technology"  category="technology"/>} />
                 <Route exact path="/login" element={<Login></Login>}/>
+                <Route exact path="/signup" element={<Signup></Signup>}/>
         
            
 
