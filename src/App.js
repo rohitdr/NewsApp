@@ -48,7 +48,7 @@ import Signup from './Components/Signup';
                 <Route exact path="/sports"  element={ <News setProgress={setProgress} apiKey={apiKey}  page_size={5} key="science"  category="sports"/>} />
                 <Route exact path="/technology"  element={ <News setProgress={setProgress} apiKey={apiKey}  page_size={5} key="technology"  category="technology"/>} />
                 <Route exact path="/login" element={<Login></Login>}/>
-                <Route exact path="/signup" element={<Signup></Signup>}/>
+                <Route exact path="/Signup" element={<Signup></Signup>}/>
         
            
 

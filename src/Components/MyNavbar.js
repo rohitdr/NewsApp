@@ -40,6 +40,7 @@ const MyNavbar=()=> {
         <Navbar.Link ><Link className="navbarlink"to="/technology">Technology</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/science">Sceince</Link> </Navbar.Link>
          <Navbar.Link><Link className="navbarlink"to="/login"></Link></Navbar.Link>
+         <Navbar.Link><Link className="navbarlink"to="/Signup"></Link></Navbar.Link>
 
           <Input
               clearable
