@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Navbar, Button, Dropdown,Avatar,Input, Text } from "@nextui-org/react";
+import { Navbar, Button, Dropdown,Avatar,Input, Text,Link as Linkank } from "@nextui-org/react";
 import { SearchIcon } from './Searchicon';
 // import { Layout } from "./Layout.js";
 // import { AcmeLogo } from "./AcmeLogo.js";
 
 const MyNavbar=()=> {
   const collapseItems = [
-    "Features",
-    "Customers",
-    "Pricing",
-    "Company",
-    "Legal",
-    "Team",
-    "Help & Feedback",
+    "Home",
+    "Bussiness",
+    "Entertainment",
+    "Sports",
+    "Health",
+    "Technology",
+    "Science",
     "Login",
     "Sign Up",
   ];
@@ -25,7 +25,7 @@ const MyNavbar=()=> {
     
       <Navbar isBordered variant="sticky">
         <Navbar.Brand>
-          <Navbar.Toggle aria-label="toggle navigation" />
+          <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
           {/* <AcmeLogo /> */}
           <Text b color="inherit" hideIn="xs">
             NewsHub
@@ -39,7 +39,8 @@ const MyNavbar=()=> {
         <Navbar.Link ><Link className="navbarlink"to="/health">Health</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/technology">Technology</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/science">Sceince</Link> </Navbar.Link>
-         
+         <Navbar.Link><Link className="navbarlink"to="/login"></Link></Navbar.Link>
+
           <Input
               clearable
               contentLeft={
@@ -61,6 +62,7 @@ const MyNavbar=()=> {
             />
           
         </Navbar.Content>
+       
         <Navbar.Content>
         <Dropdown placement="bottom-right">
             <Navbar.Item>
@@ -106,6 +108,21 @@ const MyNavbar=()=> {
         {collapseItems.map((item, index) => (
           <Navbar.CollapseItem key={item}>
             
+          </Navbar.CollapseItem>
+        ))}
+      </Navbar.Collapse>
+      <Navbar.Collapse>
+        {collapseItems.map((item, index) => (
+          <Navbar.CollapseItem key={item}>
+            <Linkank
+              color="inherit"
+              css={{
+                minWidth: "100%",
+              }}
+       
+            > <Link to={`/${item}`}>{item}</Link>
+              
+             </Linkank>
           </Navbar.CollapseItem>
         ))}
       </Navbar.Collapse>
