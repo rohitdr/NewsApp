@@ -33,16 +33,101 @@ const MyNavbar=()=> {
         </Navbar.Brand>
         <Navbar.Content activeColor="error" enableCursorHighlight hideIn="xs" varient="highlight-solid-rounded" >
         <Navbar.Link isActive><Link className="navbarlink"to="/home">Home</Link> </Navbar.Link>
-        <Navbar.Link ><Link className="navbarlink"to="/bussiness">Bussiness</Link> </Navbar.Link>
+        {/* <Navbar.Link ><Link className="navbarlink"to="/bussiness">Bussiness</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/entertainment">Entertainment</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/sports">Sports</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/health">Health</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/technology">Technology</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/science">Sceince</Link> </Navbar.Link>
          <Navbar.Link><Link className="navbarlink"to="/login"></Link></Navbar.Link>
-         <Navbar.Link><Link className="navbarlink"to="/Signup"></Link></Navbar.Link>
+         <Navbar.Link><Link className="navbarlink"to="/Signup"></Link></Navbar.Link> */}
          
-
+         <Dropdown isBordered>
+            <Navbar.Item>
+              <Dropdown.Button
+                auto
+                light
+                css={{
+                  px: 0,
+                  dflex: "center",
+                  svg: { pe: "none" },
+                }}
+                
+                ripple={false}
+              >
+                Category
+              </Dropdown.Button>
+            </Navbar.Item>
+            <Dropdown.Menu
+              aria-label="ACME features"
+              css={{
+                $$dropdownMenuWidth: "340px",
+                $$dropdownItemHeight: "70px",
+                "& .nextui-dropdown-item": {
+                  py: "$4",
+                  // dropdown item left icon
+                  svg: {
+                    color: "$secondary",
+                    mr: "$4",
+                  },
+                  // dropdown item title
+                  "& .nextui-dropdown-item-content": {
+                    w: "100%",
+                    fontWeight: "$semibold",
+                  },
+                },
+              }}
+            >
+              <Dropdown.Item
+                key="autoscaling"
+                showFullDescription
+                description="ACME scales apps to meet user demand, automagically, based on load."
+               
+              >
+               <Link className="navbarlink"to="/bussiness">Bussiness</Link> 
+              </Dropdown.Item>
+              <Dropdown.Item
+                key="usage_metrics"
+                showFullDescription
+                description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+               
+              >
+               <Link className="navbarlink"to="/entertainment">Entertainment</Link>
+              </Dropdown.Item>
+              <Dropdown.Item
+                key="production_ready"
+                showFullDescription
+                description="ACME runs on ACME, join us and others serving requests at web scale."
+                
+              >
+               <Link className="navbarlink"to="/sports">Sports</Link>
+              </Dropdown.Item>
+              <Dropdown.Item
+                key="99_uptime"
+                showFullDescription
+                description="Applications stay on the grid with high availability and high uptime guarantees."
+                
+              >
+                <Link className="navbarlink"to="/health">Health</Link> 
+              </Dropdown.Item>
+              <Dropdown.Item
+                key="supreme_support"
+                showFullDescription
+                description="Overcome any challenge with a supporting team ready to respond."
+                
+              >
+                <Link className="navbarlink"to="/technology">Technology</Link> 
+              </Dropdown.Item>
+              <Dropdown.Item
+                key="supreme_support"
+                showFullDescription
+                description="Overcome any challenge with a supporting team ready to respond."
+                
+              >
+                <Link className="navbarlink"to="/science">Sceince</Link>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           <Input
               clearable
               contentLeft={
