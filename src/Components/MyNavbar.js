@@ -55,7 +55,7 @@ const MyNavbar=()=> {
                 
                 ripple={false}
               >
-                Category
+                News Sections
               </Dropdown.Button>
             </Navbar.Item>
             <Dropdown.Menu
@@ -125,9 +125,11 @@ const MyNavbar=()=> {
                 
               >
                 <Link className="navbarlink"to="/science">Sceince</Link>
+                
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+          <Navbar.Link ><Link className="navbarlink"to="/login">Login/Regester</Link> </Navbar.Link>
           <Input
               clearable
               contentLeft={
@@ -174,7 +176,7 @@ const MyNavbar=()=> {
                   Signed in as
                 </Text>
                 <Text b color="inherit" css={{ d: "flex" }}>
-                  zoey@example.com
+                  example@gmail.com
                 </Text>
               </Dropdown.Item>
               <Dropdown.Item key="settings" withDivider>
