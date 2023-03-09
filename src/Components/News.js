@@ -61,12 +61,15 @@ setTotal(parsedata.totalResults)
   // };
   const mount= async()=>{
     props.setProgress(10)
-    const url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pagesize=${props.page_size}`;
+    // const url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pagesize=${props.page_size}`;
+    const url = `https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=f73ac7a4f53cf3fd119f63a5ecf9e749`;   
     props.setProgress(30)
     // this.setState({ loding: true });
     const data = await fetch(url);
-    props.setProgress(50)
     const parsedata = await data.json();
+    console.log(parsedata)
+    props.setProgress(50)
+    
     props.setProgress(70)
     setArticle(parsedata.articles)
     setLoading(false)
@@ -111,7 +114,7 @@ setTotal(parsedata.totalResults)
                           ? element.description.slice(0, 120)
                           : " "
                       }
-                      ImageUrl={element.urlToImage ? element.urlToImage : "  "}
+                      ImageUrl={element.image ? element.image : "  "}
                       NewsUrl={element.url ? element.url : " "}
                       time={element.publishedAt}
                       author={element.author}
