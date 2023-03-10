@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar, Button, Dropdown,Avatar,Input, Text,Link as Linkank } from "@nextui-org/react";
 import { SearchIcon } from './Searchicon';
 // import { Layout } from "./Layout.js";
+import { icons } from './Icon';
 // import { AcmeLogo } from "./AcmeLogo.js";
 
 const MyNavbar=()=> {
@@ -47,12 +48,8 @@ const MyNavbar=()=> {
               <Dropdown.Button
                 auto
                 light
-                css={{
-                  px: 0,
-                  dflex: "center",
-                  svg: { pe: "none" },
-                }}
                 
+                iconRight={icons.chevron}
                 ripple={false}
               >
                 News Sections
