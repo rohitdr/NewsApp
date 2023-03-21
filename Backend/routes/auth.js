@@ -10,13 +10,14 @@ router.post('/createuser',[
     body('email','Enter valid email').isEmail(),
     body ('password','password must be atleast 8 characters').isLength({min:8}),
 ],async(req,res)=>{
-//if there are errors, return bad request and the errors
+//if there are errors, return bad request and the errors.
   console.log(req.body);
 const errors = validationResult(req);
 if (!errors.isEmpty()) {
   return res.status(400).json({ errors: errors.array() });
 }
-// check weither the user with this email exists already
+// check weither the user with this email exists already!!
+//using try cath method
 try{
 let user = await User.findOne({email: req.body.email});
 
