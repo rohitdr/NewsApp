@@ -2,230 +2,214 @@ import React from 'react'
 import './Addnews.css'
 export default function Addnews() {
   return (
-    <div>
+    <>
+   
+      <div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4 " src="others/addnews.jpg" style={{borderRadius:"45px"}}alt="" width="92" height="77"/>
+      <h2>ADD NEWS</h2>
       
-<section class="h-100 h-custom" style={{backgroundColor: "#eee"}}>
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col">
-        <div class="card">
-          <div class="card-body p-4">
+    </div>
 
-            <div class="row">
-
-              <div class="col-lg-7">
-                <h5 class="mb-3"><a href="#!" class="text-body"><i
-                      class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
-                <hr/>
-
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                  <div>
-                    <p class="mb-1">Shopping cart</p>
-                    <p class="mb-0">You have 4 items in your cart</p>
-                  </div>
-                  <div>
-                    <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!"
-                        class="text-body">price <i class="fas fa-angle-down mt-1"></i></a></p>
-                  </div>
-                </div>
-
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                            class="img-fluid rounded-3" alt="Shopping item" style={{width: "65px"}}/>
-                        </div>
-                        <div class="ms-3">
-                          <h5>Iphone 11 pro</h5>
-                          <p class="small mb-0">256GB, Navy Blue</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div style={{width: "50px"}}>
-                          <h5 class="fw-normal mb-0">2</h5>
-                        </div>
-                        <div style={{width: "80px"}}>
-                          <h5 class="mb-0">$900</h5>
-                        </div>
-                        <a href="#!" style={{color: "#cecece"}}><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
-                            class="img-fluid rounded-3" alt="Shopping item" style={{width: "65px"}}/>
-                        </div>
-                        <div class="ms-3">
-                          <h5>Samsung galaxy Note 10 </h5>
-                          <p class="small mb-0">256GB, Navy Blue</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div style={{width: "50px"}}>
-                          <h5 class="fw-normal mb-0">2</h5>
-                        </div>
-                        <div style={{width: "80px"}}>
-                          <h5 class="mb-0">$900</h5>
-                        </div>
-                        <a href="#!" style={{color: "#cecece"}}><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
-                            class="img-fluid rounded-3" alt="Shopping item" style={{width: "65px"}}/>
-                        </div>
-                        <div class="ms-3">
-                          <h5>Canon EOS M50</h5>
-                          <p class="small mb-0">Onyx Black</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div style={{width: "50px"}}>
-                          <h5 class="fw-normal mb-0">1</h5>
-                        </div>
-                        <div style={{width: "80px"}}>
-                          <h5 class="mb-0">$1199</h5>
-                        </div>
-                        <a href="#!" style={{color: "#cecece"}}><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card mb-3 mb-lg-0">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
-                            class="img-fluid rounded-3" alt="Shopping item" style={{width: "65px;"}}/>
-                        </div>
-                        <div class="ms-3">
-                          <h5>MacBook Pro</h5>
-                          <p class="small mb-0">1TB, Graphite</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div style={{width: "50px"}}>
-                          <h5 class="fw-normal mb-0">1</h5>
-                        </div>
-                        <div style={{width: "80px"}}>
-                          <h5 class="mb-0">$1799</h5>
-                        </div>
-                        <a href="#!" style={{color: "#cecece"}}><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-5">
-
-                <div class="card bg-primary text-white rounded-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                      <h5 class="mb-0">Card details</h5>
-                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                        class="img-fluid rounded-3" style={{width: "45px"}} alt="Avatar"/>
-                    </div>
-
-                    <p class="small mb-2">Card type</p>
-                    <a href="#!" type="submit" class="text-white"><i
-                        class="fab fa-cc-mastercard fa-2x me-2"></i></a>
-                    <a href="#!" type="submit" class="text-white"><i
-                        class="fab fa-cc-visa fa-2x me-2"></i></a>
-                    <a href="#!" type="submit" class="text-white"><i
-                        class="fab fa-cc-amex fa-2x me-2"></i></a>
-                    <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
-
-                    <form class="mt-4">
-                      <div class="form-outline form-white mb-4">
-                        <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                          placeholder="Cardholder's Name" />
-                        <label class="form-label" for="typeName">Cardholder's Name</label>
-                      </div>
-
-                      <div class="form-outline form-white mb-4">
-                        <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                          placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                        <label class="form-label" for="typeText">Card Number</label>
-                      </div>
-
-                      <div class="row mb-4">
-                        <div class="col-md-6">
-                          <div class="form-outline form-white">
-                            <input type="text" id="typeExp" class="form-control form-control-lg"
-                              placeholder="MM/YYYY" size="7"  minlength="7" maxlength="7" />
-                            <label class="form-label" for="typeExp">Expiration</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-outline form-white">
-                            <input type="password" id="typeText" class="form-control form-control-lg"
-                              placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                            <label class="form-label" for="typeText">Cvv</label>
-                          </div>
-                        </div>
-                      </div>
-
-                    </form>
-
-                    <hr class="my-4"/>
-
-                    <div class="d-flex justify-content-between">
-                      <p class="mb-2">Subtotal</p>
-                      <p class="mb-2">$4798.00</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between">
-                      <p class="mb-2">Shipping</p>
-                      <p class="mb-2">$20.00</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between mb-4">
-                      <p class="mb-2">Total(Incl. taxes)</p>
-                      <p class="mb-2">$4818.00</p>
-                    </div>
-
-                    <button type="button" class="btn btn-info btn-block btn-lg">
-                      <div class="d-flex justify-content-between">
-                        <span>$4818.00</span>
-                        <span>Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
-                      </div>
-                    </button>
-
-                  </div>
-                </div>
-
+    <div class="row justify-content-center g-5">
+     
+      <div class="col-md-8 col-lg-8">
+        <h4 class="mb-3">ADD News</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              {/* <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required/>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div> */}
               </div>
 
+            {/* <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required/>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
             </div>
 
+            <div class="col-12">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required/>
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com"/>
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div> */}
+
+            <div class="col-12">
+              <label for="address" class="form-label">Title</label>
+              <input type="text" class="form-control" id="address" placeholder="Title of the news" required/>
+              <div class="invalid-feedback">
+                Please enter the Title of the news.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Source</label>
+              <input type="text" class="form-control" id="address" placeholder="Source of the news" required/>
+              <div class="invalid-feedback">
+                Please enter the Source of the news.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Description</label>
+              <input type="text" class="form-control" id="address" placeholder="Description of the news" required/>
+              <div class="invalid-feedback">
+                Please enter the Description of the news.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Tag</label>
+              <input type="text" class="form-control" id="address" placeholder="Tag" required/>
+              <div class="invalid-feedback">
+                Please enter the Tag of the news.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Image</label>
+              <input type="file" class="form-control" id="address" placeholder="Please insert image" required/>
+              <div class="invalid-feedback">
+                Please insert Image of the news.
+              </div>
+            </div>
+
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required>
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required>
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required/>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+        
+
+          <hr class="my-4"/>
+
+          {/* <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address"/>
+            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
           </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info"/>
+            <label class="form-check-label" for="save-info">Save this information for next time</label>
+          </div> */}
+{/* 
+          <hr class="my-4"/>
+
+          <h4 class="mb-3">Payment</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required/>
+              <label class="form-check-label" for="credit">Credit card</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required/>
+              <label class="form-check-label" for="debit">Debit card</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required/>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div> */}
+
+          {/* <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required/>
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Credit card number</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required/>
+              <div class="invalid-feedback">
+                Credit card number is required
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required/>
+              <div class="invalid-feedback">
+                Expiration date required
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required/>
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+            </div> */}
+            </div>
+          <hr class="my-4"/>
+          
+          <button class="w-100 btn btn-primary btn-lg" type="submit">ADD</button>
+        
+        </form>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-    </div>
+        </div>
+  </main>
+
+  {/* <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017– Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer> */}
+
+
+  </div>  </>
   )
 }

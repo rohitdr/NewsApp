@@ -1,4 +1,8 @@
 npm install jquery --save
 npm i --save-dev @types/jquery
-
+npm i nodemon -g
+npm bcryptjs
+npm i express
+npm i express-validator
+npm i jsonwebtoken
 npm i react-top-loading-bar
