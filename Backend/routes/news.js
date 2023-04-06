@@ -106,6 +106,9 @@ router.post("/addNews", fetchuser, async (req, res) => {
     }
   });
 
+  /* This is a route for deleting a news article from the database. It uses the HTTP DELETE method and
+  takes in the news article ID as a parameter in the URL. The `fetchuser` middleware is used to
+  authenticate the user making the request. */
   router.delete("/deleteNews/:id", fetchuser, async (req, res) => {
     try {
       
