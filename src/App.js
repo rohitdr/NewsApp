@@ -10,6 +10,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Home from './Components/Home';
+import Addnews from './Components/Addnews';
 
 
 
@@ -50,10 +51,12 @@ import Home from './Components/Home';
                 <Route exact path="/technology"  element={ <News setProgress={setProgress} apiKey={apiKey}  page_size={5} key="technology"  category="technology"/>} />
                 <Route exact path="/login" element={<Login></Login>}/>
                 <Route exact path="/Signup" element={
-                <Home></Home>
-                // <Signup></Signup>
+            
+                <Signup></Signup>
                 
                 }/>
+                                <Route exact path="/ADDNews" element={<Addnews></Addnews>}/>
+
         
            
 

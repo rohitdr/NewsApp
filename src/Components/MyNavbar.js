@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Navbar, Button, Dropdown,Avatar,Input, Text,Link as Linkank } from "@nextui-org/react";
 import { SearchIcon } from './Searchicon';
 // import { Layout } from "./Layout.js";
@@ -18,6 +18,7 @@ const MyNavbar=()=> {
     "Login",
    
   ];
+  let Nevigate=useNavigate()
     return (
         <>
         
@@ -176,8 +177,9 @@ const MyNavbar=()=> {
                   example@gmail.com
                 </Text>
               </Dropdown.Item>
-              <Dropdown.Item key="settings" withDivider>
-                My Settings
+              <Dropdown.Item key="settings"  withDivider>
+                <div  onClick={()=>{Nevigate('/ADDNews')}}> ADD News</div>
+               
               </Dropdown.Item>
               <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
               <Dropdown.Item key="analytics" withDivider>
