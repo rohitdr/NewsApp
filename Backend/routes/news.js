@@ -40,9 +40,9 @@ router.post("/addNews", fetchuser, async (req, res) => {
       res.status(500).send("Internal Server Error");
     }
   });
-  router.get("/allNews", fetchuser, async (req, res) => {
+  router.get("/allNews",  async (req, res) => {
     try {
-      const news = await News.find({ user: req.user.id });
+      const news = await News.find();
   
       const news_lenght = news.length;
       if (news_lenght == 0) {

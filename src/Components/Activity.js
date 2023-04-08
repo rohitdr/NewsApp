@@ -1,11 +1,44 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import './Activity.css'
 export default function Activity() {
+  useEffect(()=>{
+    AllNews()
+  },[])
+  const AllNews = async () => {
+    try {
+  
+      const response = await fetch('http://localhost:5000/api/news/allnews',
+
+        {
+          method: "GET",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+           
+          },
+        }
+      );
+   
+      let result = await response.json();
+      // if (response.status == 404) {
+       
+      // } else if (response.status == 200) {
+       
+      // } else {
+       
+      // }
+      console.log(result)
+    } catch (error) {
+     
+      console.log(error.message);
+    }
+  };
   return (
-    <div className='Activity'>
+    <div className='Activity pt-4'>
+    
       <div class="container">
       <div class="row">
-    
+
         <div class="col-lg-12 mb-3">
           {/* <div class="row text-left mb-5">
             <div class="col-lg-6 mb-3 mb-sm-0">
