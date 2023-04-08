@@ -4,6 +4,8 @@ const JWT_SECRET ='baburao30lakh';
 const fetchuser = (req, res, next)=>{
 //Get the user from jwt token and add id to req object
 
+/* This is a middleware function that is used to verify the token and add the user id to the request
+object. */
 const token = req.header('auth-token');
 if(!token){
     res.status(401).send({error: "please authenthicate using a valid token" })

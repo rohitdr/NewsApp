@@ -116,7 +116,7 @@ router.post("/addNews", fetchuser, async (req, res) => {
       if (!news) {
         return res.status(404).json({error:"News not found"});
       }
-      //verfing user
+      // verfing user
       if (news.user.toString() !== req.user.id) {
         return res.status(404).json({error:" You Are Not allowed"});
       }
