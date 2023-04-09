@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react'
 import './Activity.css'
 export default function Activity() {
+  /* The above code is using the `useEffect` hook in React to call the `AllNews` function when the
+  component mounts. The `[]` as the second argument to `useEffect` means that the effect will only
+  run once, when the component mounts. */
   useEffect(()=>{
     AllNews()
   },[])
+  /**
+   * The function sends a GET request to a local API endpoint to retrieve all news articles.
+   */
   const AllNews = async () => {
     try {
   
@@ -19,6 +25,8 @@ export default function Activity() {
         }
       );
    
+      
+      
       let result = await response.json();
       // if (response.status == 404) {
        

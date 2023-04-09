@@ -6,6 +6,9 @@ import jQuery from 'jquery';
 export default function Navbar1() {
   
     // ---------Responsive-navbar-active-animation-----------
+/* The `test()` function is defining variables and calculating the position and dimensions of the
+active item in the navbar. It is used to animate the horizontal selector bar that highlights the
+active item in the navbar. */
 function test(){
 	var tabsNewAnim = $('#navbarSupportedContent');
 	var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
@@ -14,12 +17,22 @@ function test(){
 	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
 	var itemPosNewAnimTop = activeItemNewAnim.position();
 	var itemPosNewAnimLeft = activeItemNewAnim.position();
+	/* This code is setting the CSS properties of the element with class "hori-selector". It is
+	positioning the element at the top and left positions of the active item in the navbar, and setting
+	its height and width to match the height and width of the active item. This is used to animate a
+	horizontal selector bar that highlights the active item in the navbar. */
 	$(".hori-selector").css({
 		"top":itemPosNewAnimTop.top + "px", 
 		"left":itemPosNewAnimLeft.left + "px",
 		"height": activeWidthNewAnimHeight + "px",
 		"width": activeWidthNewAnimWidth + "px"
 	});
+	/* This code is adding a click event listener to the `li` elements inside the
+	`#navbarSupportedContent` element. When an `li` element is clicked, it removes the "active" class
+	from all `li` elements inside `#navbarSupportedContent`, adds the "active" class to the clicked
+	`li` element, and calculates the position and dimensions of the clicked `li` element. These
+	position and dimension values are then used to animate a horizontal selector bar that highlights
+	the active item in the navbar. */
 	$("#navbarSupportedContent").on("click","li",function(e){
 		$('#navbarSupportedContent ul li').removeClass("active");
 		$(this).addClass('active');
@@ -27,6 +40,10 @@ function test(){
 		var activeWidthNewAnimWidth = $(this).innerWidth();
 		var itemPosNewAnimTop = $(this).position();
 		var itemPosNewAnimLeft = $(this).position();
+/* This code is setting the CSS properties of the element with class "hori-selector". It is positioning
+the element at the top and left positions of the active item in the navbar, and setting its height
+and width to match the height and width of the active item. This is used to animate a horizontal
+selector bar that highlights the active item in the navbar. */
 		$(".hori-selector").css({
 			"top":itemPosNewAnimTop.top + "px", 
 			"left":itemPosNewAnimLeft.left + "px",
@@ -35,12 +52,31 @@ function test(){
 		});
 	});
 }
+/* `$(document).ready(function(){ setTimeout(function(){ test(); }); });` is a jQuery function that
+waits for the document to be fully loaded before executing the `test()` function. The `test()`
+function calculates the position and dimensions of the active item in the navbar and animates a
+horizontal selector bar that highlights the active item in the navbar. The `setTimeout()` function
+is used to delay the execution of the `test()` function by a specified amount of time (in
+milliseconds) to ensure that all elements in the document have been loaded before the function is
+executed. */
 $(document).ready(function(){
 	setTimeout(function(){ test(); });
 });
+/* `$(window).on('resize', function(){ setTimeout(function(){ test(); }, 500); });` is adding an event
+listener to the window object that listens for a resize event. When the window is resized, the
+`test()` function is executed after a delay of 500 milliseconds. This delay is added to ensure that
+all elements in the document have been resized before the `test()` function is executed. The
+`test()` function calculates the position and dimensions of the active item in the navbar and
+animates a horizontal selector bar that highlights the active item in the navbar. */
 $(window).on('resize', function(){
 	setTimeout(function(){ test(); }, 500);
 });
+/* This code is adding a click event listener to the element with class "navbar-toggler". When this
+element is clicked, it toggles the visibility of the element with class "navbar-collapse" by sliding
+it up or down over a duration of 300 milliseconds. It also calls the `test()` function after a delay
+of 300 milliseconds using the `setTimeout()` function. The `test()` function calculates the position
+and dimensions of the active item in the navbar and animates a horizontal selector bar that
+highlights the active item in the navbar. */
 $(".navbar-toggler").click(function(){
 	$(".navbar-collapse").slideToggle(300);
 	setTimeout(function(){ test(); });

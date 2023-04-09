@@ -8,6 +8,9 @@ const ChevronDownIcon = ({fill, size, width = 24, height = 24, ...props}) => {
       viewBox="0 0 24 24"
       width={size || width || 24}
       xmlns="http://www.w3.org/2000/svg"
+      /* `{...props}` is a spread operator that allows passing any additional props to the component.
+      It is used to pass any additional attributes or properties to the SVG element that are not
+      explicitly defined in the component. This makes the component more flexible and reusable. */
       {...props}
     >
       <path

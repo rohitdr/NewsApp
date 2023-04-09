@@ -3,6 +3,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from "./Loader";
 import Newsitem from "./Newsitem";
 
+
  const News =(props)=> {
 const[article, setArticle]=useState([])
 const[loading, setLoading]=useState(true)

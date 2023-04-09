@@ -6,6 +6,10 @@ import { SearchIcon } from './Searchicon';
 import { icons } from './Icon';
 // import { AcmeLogo } from "./AcmeLogo.js";
 
+/**
+ * This is a JavaScript function that creates a navbar with collapsible items and uses the useNavigate
+ * hook.
+ */
 const MyNavbar=()=> {
   const collapseItems = [
     "Home",
