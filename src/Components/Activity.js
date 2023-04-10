@@ -10,6 +10,8 @@ export default function Activity() {
   /**
    * The function sends a GET request to a local API endpoint to retrieve all news articles.
    */
+ 
+ 
   const AllNews = async () => {
     try {
   

@@ -12,10 +12,10 @@ import React from 'react'
   <div class="card-body">
     <h5 class="card-title">{props.title}.....</h5>
     <p class="card-text">{props.desc}</p>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{zIndex:1}}>
+    {/* <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{zIndex:1}}>
     {props.source}
     <span class="visually-hidden"></span>
-  </span>
+  </span> */}
     <p class="card-text"><small class="text-muted"> {(new Date(props.time).toUTCString())} By {props.author?props.author:"Rohit"}</small></p>
     <a href={props.NewsUrl} target= "_blank" class="btn btn-primary">Read More</a>
   

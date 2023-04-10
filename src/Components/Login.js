@@ -1,8 +1,47 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './login.css'
+import { useState } from 'react';
 
 export default function Login() {
+  const [logindetails,setlogindetails]=useState({email:"",password:""})
+  const loginapi = async () => {
+    console.log(logindetails)
+    try {
+  
+      const response = await fetch('http://localhost:5000/api/auth/login',
+
+        {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+           
+          },
+          body: JSON.stringify({
+ 
+            "email": "rohitdr098@gmail.com",
+            "password": "123456789"
+          }),
+        }
+      );
+   
+      
+      
+      let result = await response.json();
+      // if (response.status == 404) {
+       
+      // } else if (response.status == 200) {
+       
+      // } else {
+       
+      // }
+  console.log(result)
+    } catch (error) {
+     
+      console.log(error.message);
+    }
+  };
   return (
     <div>
       <section class="vh-100 gradient-custom">
@@ -19,17 +58,17 @@ export default function Login() {
 
               <div class="form-outline form-white mb-4">
                 <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">Email</label>
+                <label class="form-label" for="typeEmailX" id="email" name="email" onChange={()=>{logindetails.email="rohit"}}>Email</label>
               </div>
 
               <div class="form-outline form-white mb-4">
                 <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Password</label>
+                <label class="form-label" for="typePasswordX" id="password" name="password">Password</label>
               </div>
 
-              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+              {/* <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> */}
 
-              <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+              <button class="btn btn-outline-light btn-lg px-5" type="button" onClick={loginapi}>Login</button>
 
               <div class="d-flex justify-content-center text-center mt-4 pt-1">
                 <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>

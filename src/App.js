@@ -12,6 +12,7 @@ import Signup from './Components/Signup';
 import Home from './Components/Home';
 import Addnews from './Components/Addnews';
 import Activity from './Components/Activity';
+import Monthlyhighlights from './Components/Monthlyhighlights';
 
 
 
@@ -58,9 +59,13 @@ import Activity from './Components/Activity';
                 }/>
                                 <Route exact path="/ADDNews" element={
                                 // <Addnews></Addnews>
-                                <Activity></Activity>
+                               <Monthlyhighlights></Monthlyhighlights>
                                 }/>
-
+  <Route exact path="/Activity" element={
+                               
+                                <Activity></Activity>
+                                
+                                }/>
         
            
 
