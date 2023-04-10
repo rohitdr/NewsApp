@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 
+/* This code is defining a Mongoose schema for a news article. It specifies the fields that a news
+article should have, such as title, description, tag, date, user, image, source, and userdata. Each
+field has a type and some fields have additional properties such as required, default, ref, and
+unique. This schema can be used to create a Mongoose model for news articles that can be stored and
+retrieved from a MongoDB database. */
 const NewsSchema = new mongoose.Schema({
   title: {
     type: 'string',
