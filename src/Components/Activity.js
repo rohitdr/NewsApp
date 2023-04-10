@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react'
 import './Activity.css'
 export default function Activity() {
+
   useEffect(()=>{
     AllNews()
   },[])
+/**
+ * The function `AllNews` makes a GET request to a local API endpoint and logs the response data to the
+ * console.
+ */
   const AllNews = async () => {
     try {
   
@@ -20,6 +25,7 @@ export default function Activity() {
       );
    
       let result = await response.json();
+
       // if (response.status == 404) {
        
       // } else if (response.status == 200) {
