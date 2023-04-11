@@ -4,6 +4,7 @@ import { Navbar, Button, Dropdown,Avatar,Input, Text,Link as Linkank } from "@ne
 import { SearchIcon } from './Searchicon';
 // import { Layout } from "./Layout.js";
 import { icons } from './Icon';
+
 // import { AcmeLogo } from "./AcmeLogo.js";
 
 /**
@@ -11,6 +12,7 @@ import { icons } from './Icon';
  * hook.
  */
 const MyNavbar=()=> {
+  let Navigate=useNavigate();
   const collapseItems = [
     "Home",
     "Bussiness",
@@ -37,8 +39,9 @@ const MyNavbar=()=> {
             NewsHub
           </Text>
         </Navbar.Brand>
-        <Navbar.Content activeColor="error" enableCursorHighlight hideIn="xs" varient="highlight-solid-rounded" >
+        <Navbar.Content activeColor="error" hideIn="xs" varient="highlight-solid-rounded" >
         <Navbar.Link isActive><Link className="navbarlink"to="/home">Home</Link> </Navbar.Link>
+        <Navbar.Link> <Link className="navbarlink"to="/Monthlyhighlights">Heighlights</Link></Navbar.Link>
         {/* <Navbar.Link ><Link className="navbarlink"to="/bussiness">Bussiness</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/entertainment">Entertainment</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/sports">Sports</Link> </Navbar.Link>
@@ -131,7 +134,7 @@ const MyNavbar=()=> {
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Navbar.Link ><Link className="navbarlink"to="/login">Login/Regester</Link> </Navbar.Link>
+      
           <Input
               clearable
               contentLeft={
@@ -155,7 +158,7 @@ const MyNavbar=()=> {
         </Navbar.Content>
        
         <Navbar.Content>
-        <Dropdown placement="bottom-right">
+        {sessionStorage.getItem("auth-token")?  <Dropdown placement="bottom-right">
             <Navbar.Item>
               <Dropdown.Trigger>
                 <Avatar
@@ -192,9 +195,37 @@ const MyNavbar=()=> {
               <Dropdown.Item key="system">System</Dropdown.Item>
               <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
               <Dropdown.Item key="help_and_feedback" withDivider>Help & Feedback</Dropdown.Item>
-              <Dropdown.Item key="logout" withDivider color="error"> Log Out </Dropdown.Item>
+              <Dropdown.Item key="logout" withDivider color="error" ><div onClick={()=>{sessionStorage.removeItem("auth-token")}}>Log Out</div>  </Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>
+          </Dropdown>: <Dropdown placement="bottom-right">
+            <Navbar.Item>
+              <Dropdown.Trigger>
+                <Avatar
+                  bordered
+                  as="button"
+                  color="secondary"
+                  size="md"
+                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                />
+                
+              </Dropdown.Trigger>
+            </Navbar.Item>
+            <Dropdown.Menu
+              aria-label="User menu actions"
+              color="secondary"
+            
+            >
+             
+        
+              <Dropdown.Item key="help_and_feedback" ><div onClick={()=>{Navigate('/login')}}> Login</div></Dropdown.Item>
+              <Dropdown.Item key="logout"  ><div onClick={()=>{Navigate('/Signup')}}>Sign Up</div>  </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>}
+      
+
+
+
+
         </Navbar.Content>
         <Navbar.Collapse>
         {collapseItems.map((item, index) => (

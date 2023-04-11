@@ -1,46 +1,69 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import './login.css'
 import { useState } from 'react';
 
 export default function Login() {
-  const [logindetails,setlogindetails]=useState({email:"",password:""})
+let Navigate=useNavigate();
+useEffect(()=>{
+if(sessionStorage.getItem("auth-token")){
+  Navigate('/home')
+}
+},[])
+ /**
+  * This is a JavaScript function that sends a POST request to a login API endpoint with user email and
+  * password, and returns the response in JSON format.
+  */
   const loginapi = async () => {
-    console.log(logindetails)
-    try {
+    let email=document.getElementById('email').value
+    let password=document.getElementById('password').value
+    if(email.length<8){
+      window.alert("email must contain atleast 8 characters")
   
-      const response = await fetch('http://localhost:5000/api/auth/login',
-
-        {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-           
-          },
-          body: JSON.stringify({
- 
-            "email": "rohitdr098@gmail.com",
-            "password": "123456789"
-          }),
-        }
-      );
-   
-      
-      
-      let result = await response.json();
-      // if (response.status == 404) {
-       
-      // } else if (response.status == 200) {
-       
-      // } else {
-       
-      // }
-  console.log(result)
-    } catch (error) {
-     
-      console.log(error.message);
     }
+    else if(password.length<8){
+      window.alert("password must contain atleast 8 characters")
+     }
+     else{
+      try {
+  
+        const response = await fetch('http://localhost:5000/api/auth/login',
+  
+          {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+             
+            },
+            body: JSON.stringify({
+   
+              "email": email,
+              "password": password
+            }),
+          }
+        );
+     
+        
+        
+        let result = await response.json();
+        if (response.status == 404) {
+          window.alert(result.error)
+        } else if (response.status == 200) {
+          // console.log(result)
+          sessionStorage.setItem("auth-token",result.authtoken)
+          // console.log(sessionStorage.getItem("auth-token"))
+          Navigate("/home")
+        } else {
+         
+        }
+   
+      } catch (error) {
+       
+        console.log(error.message);
+      }
+     }
+   
   };
   return (
     <div>
@@ -57,13 +80,13 @@ export default function Login() {
               <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
               <div class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX" id="email" name="email" onChange={()=>{logindetails.email="rohit"}}>Email</label>
+                <input type="email"  class="form-control form-control-lg" id="email" name="email" />
+                <label class="form-label" for="typeEmailX" >Email</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX" id="password" name="password">Password</label>
+                <input type="password" class="form-control form-control-lg" id="password" name="password"/>
+                <label class="form-label" for="typePasswordX" >Password</label>
               </div>
 
               {/* <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> */}
