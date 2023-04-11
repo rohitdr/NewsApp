@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Navbar, Button, Dropdown,Avatar,Input, Text,Link as Linkank } from "@nextui-org/react";
-import { SearchIcon } from './Searchicon';
+
 // import { Layout } from "./Layout.js";
 import { icons } from './Icon';
 
@@ -135,25 +135,7 @@ const MyNavbar=()=> {
             </Dropdown.Menu>
           </Dropdown>
       
-          <Input
-              clearable
-              contentLeft={
-                <SearchIcon fill="var(--nextui-colors-accents6)" size={16} />
-              }
-              contentLeftStyling={false}
-              css={{
-                w: "100%",
-                "@xsMax": {
-                  mw: "300px",
-                },
-                "& .nextui-input-content--left": {
-                  h: "100%",
-                  ml: "$4",
-                  dflex: "center",
-                },
-              }}
-              placeholder="Search..."
-            />
+          
           
         </Navbar.Content>
        
