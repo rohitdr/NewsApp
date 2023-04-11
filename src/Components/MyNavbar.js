@@ -195,7 +195,7 @@ const MyNavbar=()=> {
               <Dropdown.Item key="system">System</Dropdown.Item>
               <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
               <Dropdown.Item key="help_and_feedback" withDivider>Help & Feedback</Dropdown.Item>
-              <Dropdown.Item key="logout" withDivider color="error" ><div onClick={()=>{sessionStorage.removeItem("auth-token")}}>Log Out</div>  </Dropdown.Item>
+              <Dropdown.Item key="logout" withDivider color="error" ><div onClick={()=>{sessionStorage.removeItem("auth-token"); Navigate('/login')}}>Log Out</div>  </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>: <Dropdown placement="bottom-right">
             <Navbar.Item>
