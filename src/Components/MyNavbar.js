@@ -4,6 +4,8 @@ import { Navbar, Button, Dropdown,Avatar,Input, Text,Link as Linkank } from "@ne
 
 // import { Layout } from "./Layout.js";
 import { icons } from './Icon';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 // import { AcmeLogo } from "./AcmeLogo.js";
 
@@ -11,6 +13,7 @@ import { icons } from './Icon';
  * This is a JavaScript function that creates a navbar with collapsible items and uses the useNavigate
  * hook.
  */
+
 const MyNavbar=()=> {
   let Navigate=useNavigate();
   const collapseItems = [
@@ -25,6 +28,44 @@ const MyNavbar=()=> {
    
   ];
   let Nevigate=useNavigate()
+useEffect(()=>{
+getuserdata();
+},[])
+  const [loggeduserdata,setloggeduserdata]=useState({})
+  const getuserdata=async()=>{
+    try{
+      const response = await fetch('http://localhost:5000/api/auth/getuser',
+    
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": sessionStorage.getItem("auth-token")
+        },
+       
+      }
+    );
+    
+    
+    
+    let result = await response.json();
+    if (response.status == 404) {
+  
+    } else if (response.status == 200) {
+    setloggeduserdata(result)
+     
+   
+    } else {
+    
+    }
+    
+    } catch (error) {
+    
+    console.log(error.message);
+    }
+  }
+ 
     return (
         <>
         
@@ -148,7 +189,7 @@ const MyNavbar=()=> {
                   as="button"
                   color="secondary"
                   size="md"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                  src={loggeduserdata?.image}
                 />
                 
               </Dropdown.Trigger>
@@ -163,7 +204,7 @@ const MyNavbar=()=> {
                   Signed in as
                 </Text>
                 <Text b color="inherit" css={{ d: "flex" }}>
-                  example@gmail.com
+                {loggeduserdata?.email}
                 </Text>
               </Dropdown.Item>
               <Dropdown.Item key="settings"  withDivider>
@@ -171,8 +212,8 @@ const MyNavbar=()=> {
                
               </Dropdown.Item>
               <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
-              <Dropdown.Item key="analytics" withDivider>
-                Analytics
+              <Dropdown.Item key="analytics" withDivider >
+              <div onClick={()=>{Navigate('/Activity')}}>News Operations</div> 
               </Dropdown.Item>
               <Dropdown.Item key="system">System</Dropdown.Item>
               <Dropdown.Item key="configurations">Configurations</Dropdown.Item>

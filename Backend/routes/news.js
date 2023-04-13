@@ -68,6 +68,23 @@ router.post("/addNews", fetchuser, async (req, res) => {
 
 
   });
+  router.get("/allNewsbyid",fetchuser,  async (req, res) => {
+    try {
+      const news = await News.find({user:req.user.id})
+      const news_lenght = news.length;
+      if (news_lenght == 0) {
+        return res.status(404).json({error:"Their is no News avialable in database"});
+      }
+  
+      res.status(200).json({news, totalResults: news_lenght });
+      console.log(req.user.id)
+    } catch (error) {
+      console.log(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+
+
+  });
 
   router.put("/updateNews/:id", fetchuser, async (req, res) => {
     try {
