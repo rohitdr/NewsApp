@@ -7,7 +7,7 @@ import { icons } from './Icon';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-// import { AcmeLogo } from "./AcmeLogo.js";
+import { Logo } from "./Logo.js";
 
 /**
  * This is a JavaScript function that creates a navbar with collapsible items and uses the useNavigate
@@ -75,109 +75,25 @@ getuserdata();
       <Navbar isBordered variant="sticky">
         <Navbar.Brand>
           <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
-          {/* <AcmeLogo /> */}
+          <Logo></Logo>
           <Text b color="inherit" hideIn="xs">
             NewsHub
           </Text>
         </Navbar.Brand>
         <Navbar.Content activeColor="error" hideIn="xs" varient="highlight-solid-rounded" >
-        <Navbar.Link isActive><Link className="navbarlink"to="/home">Home</Link> </Navbar.Link>
+        <Navbar.Link isActive ><Link className="navbarlink"to="/home">Home</Link> </Navbar.Link>
         <Navbar.Link> <Link className="navbarlink"to="/Monthlyhighlights">Heighlights</Link></Navbar.Link>
-        {/* <Navbar.Link ><Link className="navbarlink"to="/bussiness">Bussiness</Link> </Navbar.Link>
+        <Navbar.Link ><Link className="navbarlink"to="/bussiness">Bussiness</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/entertainment">Entertainment</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/sports">Sports</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/health">Health</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/technology">Technology</Link> </Navbar.Link>
         <Navbar.Link ><Link className="navbarlink"to="/science">Sceince</Link> </Navbar.Link>
          <Navbar.Link><Link className="navbarlink"to="/login"></Link></Navbar.Link>
-         <Navbar.Link><Link className="navbarlink"to="/Signup"></Link></Navbar.Link> */}
+         <Navbar.Link><Link className="navbarlink"to="/Signup"></Link></Navbar.Link>
          
-         <Dropdown isBordered>
-            <Navbar.Item>
-              <Dropdown.Button
-                auto
-                light
-                
-                iconRight={icons.chevron}
-                ripple={false}
-              >
-                News Sections
-              </Dropdown.Button>
-            </Navbar.Item>
-            <Dropdown.Menu
-              aria-label="ACME features"
-              css={{
-                $$dropdownMenuWidth: "340px",
-                $$dropdownItemHeight: "70px",
-                "& .nextui-dropdown-item": {
-                  py: "$4",
-                  // dropdown item left icon
-                  svg: {
-                    color: "$secondary",
-                    mr: "$4",
-                  },
-                  // dropdown item title
-                  "& .nextui-dropdown-item-content": {
-                    w: "100%",
-                    fontWeight: "$semibold",
-                  },
-                },
-              }}
-            >
-              <Dropdown.Item
-                key="autoscaling"
-                showFullDescription
-                description="ACME scales apps to meet user demand, automagically, based on load."
-               
-              >
-               <Link className="navbarlink"to="/bussiness">Bussiness</Link> 
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="usage_metrics"
-                showFullDescription
-                description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-               
-              >
-               <Link className="navbarlink"to="/entertainment">Entertainment</Link>
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="production_ready"
-                showFullDescription
-                description="ACME runs on ACME, join us and others serving requests at web scale."
-                
-              >
-               <Link className="navbarlink"to="/sports">Sports</Link>
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="99_uptime"
-                showFullDescription
-                description="Applications stay on the grid with high availability and high uptime guarantees."
-                
-              >
-                <Link className="navbarlink"to="/health">Health</Link> 
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="supreme_support"
-                showFullDescription
-                description="Overcome any challenge with a supporting team ready to respond."
-                
-              >
-                <Link className="navbarlink"to="/technology">Technology</Link> 
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="supreme_support"
-                showFullDescription
-                description="Overcome any challenge with a supporting team ready to respond."
-                
-              >
-                <Link className="navbarlink"to="/science">Sceince</Link>
-                
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-      
-          
-          
+         
+              
         </Navbar.Content>
        
         <Navbar.Content>
