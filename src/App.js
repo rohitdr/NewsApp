@@ -64,7 +64,7 @@ const App = () => {
             </div>
           </div>
         </BrowserRouter>
-        {/* <Individual_Recipe></Individual_Recipe> */}
+        
       </>
 
     </div>
