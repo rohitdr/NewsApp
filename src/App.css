@@ -40,3 +40,31 @@
     transform: rotate(360deg);
   }
 }
+.boxshadow{
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+}
+.home{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Monthlyhighlights{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.science{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.technology{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.sports{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.bussiness{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.entertainment{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.health{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

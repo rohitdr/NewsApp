@@ -13,7 +13,7 @@ import Home from './Components/Home';
 import Addnews from './Components/Addnews';
 import Activity from './Components/Activity';
 import Monthlyhighlights from './Components/Monthlyhighlights';
-
+import Profile from './Components/Profile';
 
 
 const App = () => {
@@ -49,14 +49,20 @@ const App = () => {
                   <Route exact path="/entertainment" element={<News setProgress={setProgress} apiKey={apiKey} key="entertainment" page_size={5} country="in" category="entertainment" />} />
                   <Route exact path="/health" element={<News setProgress={setProgress} apiKey={apiKey} page_size={5} key="health" category="health" />} />
                   <Route exact path="/science" element={<News setProgress={setProgress} apiKey={apiKey} page_size={5} key="science" category="science" />} />
-                  <Route exact path="/sports" element={<News setProgress={setProgress} apiKey={apiKey} page_size={5} key="science" category="sports" />} />
+                  <Route exact path="/sports" element={<News setProgress={setProgress} apiKey={apiKey} page_size={5} key="sports" category="sports" />} />
                   <Route exact path="/technology" element={<News setProgress={setProgress} apiKey={apiKey} page_size={5} key="technology" category="technology" />} />
                   <Route exact path="/login" element={<Login></Login>} />
                   <Route exact path="/Signup" element={<Signup></Signup> } />
                   <Route exact path="/ADDNews" element={  <Addnews></Addnews>} />
                   <Route exact path="/Activity" element={<Activity></Activity>} />
-                  <Route exact path="/Monthlyhighlights" element={<Monthlyhighlights></Monthlyhighlights> } />
-
+                  <Route exact path="/Monthlyhighlights" element={
+                  <Monthlyhighlights></Monthlyhighlights> 
+              
+                  } />
+ <Route exact path="/Profile" element={
+                
+               <Profile></Profile>
+                  } />
 
 
                 </Routes>

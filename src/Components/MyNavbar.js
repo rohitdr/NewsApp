@@ -24,13 +24,14 @@ const MyNavbar=()=> {
     "Health",
     "Technology",
     "Science",
-    "Login",
+    
+    
    
   ];
   let Nevigate=useNavigate()
 useEffect(()=>{
 getuserdata();
-},[])
+},[sessionStorage.getItem("auth-token")])
   const [loggeduserdata,setloggeduserdata]=useState({})
   const getuserdata=async()=>{
     try{
@@ -81,16 +82,18 @@ getuserdata();
           </Text>
         </Navbar.Brand>
         <Navbar.Content activeColor="error" hideIn="xs" varient="highlight-solid-rounded" >
-        <Navbar.Link isActive ><Link className="navbarlink"to="/home">Home</Link> </Navbar.Link>
-        <Navbar.Link> <Link className="navbarlink"to="/Monthlyhighlights">Heighlights</Link></Navbar.Link>
-        <Navbar.Link ><Link className="navbarlink"to="/bussiness">Bussiness</Link> </Navbar.Link>
-        <Navbar.Link ><Link className="navbarlink"to="/entertainment">Entertainment</Link> </Navbar.Link>
-        <Navbar.Link ><Link className="navbarlink"to="/sports">Sports</Link> </Navbar.Link>
-        <Navbar.Link ><Link className="navbarlink"to="/health">Health</Link> </Navbar.Link>
-        <Navbar.Link ><Link className="navbarlink"to="/technology">Technology</Link> </Navbar.Link>
-        <Navbar.Link ><Link className="navbarlink"to="/science">Sceince</Link> </Navbar.Link>
-         <Navbar.Link><Link className="navbarlink"to="/login"></Link></Navbar.Link>
-         <Navbar.Link><Link className="navbarlink"to="/Signup"></Link></Navbar.Link>
+       
+        <Navbar.Link  > <div className='home' onClick={()=>{Nevigate('/home')}}>Home</div></Navbar.Link>
+
+        <Navbar.Link> <div className='Monthlyhighlights' onClick={()=>{Nevigate('/Monthlyhighlights')}}>Monthlyhighlights</div> </Navbar.Link>
+
+        <Navbar.Link> <div className='bussiness' onClick={()=>{Nevigate('/bussiness')}}>Bussiness</div> </Navbar.Link>
+        <Navbar.Link> <div className='entertainment' onClick={()=>{Nevigate('/entertainmen')}}>Entertainment</div> </Navbar.Link>
+        <Navbar.Link> <div className='sports' onClick={()=>{Nevigate('/sports')}}>Sports</div> </Navbar.Link>
+        <Navbar.Link> <div className='health' onClick={()=>{Nevigate('/health')}}>Health</div> </Navbar.Link>
+        <Navbar.Link> <div className='technology' onClick={()=>{Nevigate('/technology')}}>Technology</div> </Navbar.Link>
+        <Navbar.Link> <div className='science' onClick={()=>{Nevigate('/science')}}>Sceince</div> </Navbar.Link>
+         
          
          
               
@@ -113,7 +116,7 @@ getuserdata();
             <Dropdown.Menu
               aria-label="User menu actions"
               color="secondary"
-              onAction={(actionKey) => console.log({ actionKey })}
+            
             >
               <Dropdown.Item key="profile" css={{ height: "$18" }}>
                 <Text b color="inherit" css={{ d: "flex" }}>
@@ -127,13 +130,11 @@ getuserdata();
                 <div  onClick={()=>{Nevigate('/ADDNews')}}> ADD News</div>
                
               </Dropdown.Item>
-              <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
+              <Dropdown.Item key="team_settings"> <div onClick={()=>{Navigate('/Profile')}}>Profile</div> </Dropdown.Item>
               <Dropdown.Item key="analytics" withDivider >
               <div onClick={()=>{Navigate('/Activity')}}>News Operations</div> 
               </Dropdown.Item>
-              <Dropdown.Item key="system">System</Dropdown.Item>
-              <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
-              <Dropdown.Item key="help_and_feedback" withDivider>Help & Feedback</Dropdown.Item>
+             
               <Dropdown.Item key="logout" withDivider color="error" ><div onClick={()=>{sessionStorage.removeItem("auth-token"); Navigate('/login')}}>Log Out</div>  </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>: <Dropdown placement="bottom-right">
@@ -156,8 +157,8 @@ getuserdata();
             >
              
         
-              <Dropdown.Item key="help_and_feedback" ><div onClick={()=>{Navigate('/login')}}> Login</div></Dropdown.Item>
-              <Dropdown.Item key="logout"  ><div onClick={()=>{Navigate('/Signup')}}>Sign Up</div>  </Dropdown.Item>
+              <Dropdown.Item key="help_and_feedback" ><div className='home' onClick={()=>{Navigate('/login')}}> Login</div></Dropdown.Item>
+              <Dropdown.Item key="logout"  ><div className='home' onClick={()=>{Navigate('/Signup')}}>Sign Up</div>  </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>}
       
